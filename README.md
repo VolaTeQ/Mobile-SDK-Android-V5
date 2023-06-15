@@ -1,3 +1,14 @@
+# FORK for Volateq
+
+# Build app on RC
+
+- make sure your Java version is 17. 
+- `cd ./SampleCode-V5/android-sdk-v5-as/`
+- execute `./gradlew`
+- connect the RC (to make sure RC is connected type `adb devices`) (VSC crashes if no RC is connected...)
+- execute `./gradle installDebug`
+
+
 # DJI Mobile SDK for Android V5 Latest Version 5.4.0
 
 [中文版](README_CN.md)
