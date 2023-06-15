@@ -84,7 +84,10 @@ import kotlinx.android.synthetic.main.view_mission_setting_home.*
 class WayPointV3Fragment : DJIFragment() {
 
     private val wayPointV3VM: WayPointV3VM by activityViewModels()
-    private val WAYPOINT_SAMPLE_FILE_NAME: String = "waypointsample.kmz"
+    // private val WAYPOINT_SAMPLE_FILE_NAME: String = "waypointsample.kmz"
+    // private val WAYPOINT_SAMPLE_FILE_NAME: String = "waypointsample_greussenheim_m3t.kmz"
+    private val WAYPOINT_SAMPLE_FILE_NAME: String = "MALU2.20230523.0754_2023-06-09 13_00_E1_E2_E3_for_sample.kmz"
+    
     private val WAYPOINT_SAMPLE_FILE_DIR: String = "waypoint/"
     private val WAYPOINT_SAMPLE_FILE_CACHE_DIR: String = "waypoint/cache/"
     private val WAYPOINT_FILE_TAG = ".kmz"
@@ -373,7 +376,7 @@ class WayPointV3Fragment : DJIFragment() {
                     curMissionPath = getPath(context, it)
 
                     if (curMissionPath?.contains(".kmz") == false) {
-                        ToastUtils.showToast("Please choose KMZ file")
+                        ToastUtils.showToast("Please choose KMZ file. Your file: $curMissionPath")
                     } else {
 
                         // Choose a directory using the system's file picker.
